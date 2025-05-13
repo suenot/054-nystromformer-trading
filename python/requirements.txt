@@ -1,0 +1,30 @@
+# Core dependencies
+torch>=1.9.0
+numpy>=1.19.0
+pandas>=1.2.0
+requests>=2.25.0
+
+# Optional: for visualization
+matplotlib>=3.3.0
+seaborn>=0.11.0
+
+# Optional: for notebooks
+# SECURITY WARNING (GHSA-xm59-rqc7-hhvf / CVE-2025-53000):
+# nbconvert <=7.16.6 has a Windows-specific RCE vulnerability when converting
+# notebooks with SVG output to PDF. A malicious inkscape.bat in the working
+# directory can execute arbitrary code. Until a patched nbconvert release is
+# available, DO NOT run `jupyter nbconvert --to pdf` on untrusted notebooks
+# on Windows. Consider using non-Windows environments or sandboxed VMs for
+# PDF conversion. Monitor https://github.com/jupyter/nbconvert for updates.
+jupyter>=1.0.0
+ipywidgets>=7.6.0
+
+# Optional: for hyperparameter tuning
+optuna>=2.10.0
+
+# Development dependencies
+pytest>=6.0.0
+pytest-cov>=2.0.0
+black>=21.0.0
+isort>=5.0.0
+mypy>=0.900
